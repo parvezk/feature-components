@@ -26,14 +26,14 @@ body {
   margin: 0 auto;
 }
 
-.menu__main__item {
+.main_item {
   display: inline-block;
   padding: 0.5rem 2rem;
   border-bottom: 1px solid var(--border-grey);
 }
 
-.menu__main__item--active,
-.menu__main__item:hover {
+.main_item--active,
+.main_item:hover {
   background: white;
   border-bottom: none;
   border-right: 1px solid #cfcfcf;
@@ -41,13 +41,13 @@ body {
   margin: 0 -1px;
 }
 
-.menu__main__item--current .menu__main__item__link {
+.main_item--current .main_item__link {
   color: var(--dark-grey);
   border-bottom: 2px solid #333;
   padding-bottom: 0.3rem;
 }
 
-.menu__main__item__link {
+.main_item__link {
   text-decoration: none;
   color: var(--light-grey);
   font-family: Roboto;
@@ -55,7 +55,7 @@ body {
   font-weight: 800;
 }
 
-.menu__main__item__link:hover {
+.main_item__link:hover {
   text-decoration: underline;
   color: #1c60bb;
 }

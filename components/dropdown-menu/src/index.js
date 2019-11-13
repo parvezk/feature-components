@@ -38,22 +38,20 @@ function hideSubmenu() {
   const submenu = document.getElementsByClassName("menu__sub")[0];
   submenu.style.display = "none";
   activeMenuItem = null;
-  const activeItem = document.getElementsByClassName(
-    "menu__main__item--active"
-  );
-  activeItem[0].classList.remove("menu__main__item--active");
+  const activeItem = document.getElementsByClassName("main_item--active");
+  activeItem[0].classList.remove("main_item--active");
 }
 
 function onMenuItemMouseEnter(item) {
   if (activeMenuItem) {
-    activeMenuItem.classList.remove("menu__main__item--active");
+    activeMenuItem.classList.remove("main_item--active");
   }
   activeMenuItem = item;
-  item.classList.add("menu__main__item--active");
+  item.classList.add("main_item--active");
   showSubmenu();
 }
 
-const menuItems = document.getElementsByClassName("menu__main__item");
+const menuItems = document.getElementsByClassName("main_item");
 for (const menuItem of menuItems) {
   menuItem.onmouseenter = () => onMenuItemMouseEnter(menuItem);
 }
