@@ -1,0 +1,22 @@
+.slider {
+  /* line them up horizontally */
+  display: flex;
+
+  /* allow for scrolling */
+  overflow-x: auto;
+
+  /* ... */
+
+  /* each slide snaps into place */
+  scroll-snap-points-x: repeat(300px);
+  scroll-snap-type: mandatory;
+
+  /* make it smooth on iOS */
+  -webkit-overflow-scrolling: touch;
+}
+.slider > div {
+  /* make sure the width is honored */
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+}

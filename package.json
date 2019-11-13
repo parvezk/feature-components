@@ -1,11 +1,11 @@
 {
-  "name": "dropdown-menu",
+  "name": "feature component",
   "version": "1.0.0",
-  "description": "Simple Parcel Sandbox",
-  "main": "index.html",
+  "description": "components",
+  "main": "",
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "start": "",
+    "build": ""
   },
   "dependencies": {},
   "devDependencies": {

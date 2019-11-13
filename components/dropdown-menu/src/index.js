@@ -59,25 +59,25 @@ for (const menuItem of menuItems) {
 }
 
 const menu = document.getElementsByClassName("menu")[0];
-menu.onmouseleave = hideSubmenu;
+if (menu) menu.onmouseleave = hideSubmenu;
 
 // Server
 
 function getCategories(data) {
-  if (data.category == "top") {
-    if (data.menuItem == "Motors") {
+  if (data.category === "top") {
+    if (data.menuItem === "Motors") {
       return ["Car", "Motorcycle", "Plane", "Trucks", "Wheels"];
     }
-    if (data.menuItem == "Fashion") {
+    if (data.menuItem === "Fashion") {
       return ["Women's tops", "Men's tops", "Jeans", "Hats"];
     }
     return ["Server apple", "Server banana", "Server pear", "Server orange"];
   }
-  if (data.category == "additional") {
-    if (data.menuItem == "Motors") {
+  if (data.category === "additional") {
+    if (data.menuItem === "Motors") {
       return ["Tires", "Windshields", "Ski racks", "Doors", "Windows"];
     }
-    if (data.menuItem == "Fashion") {
+    if (data.menuItem === "Fashion") {
       return ["On sale", "Red stuff", "Gucci", "New Arrivals"];
     }
     return ["Server square", "Server circle", "Server oval", "Server diamond"];
@@ -92,7 +92,7 @@ const endpoints = {
 };
 
 function getFunction(url, data, callback) {
-  const domain = url.substring(0, url.indexOf("/"));
+  const domain = url.substring(0, url.indexOf("/")); //eslint-ignore
   const endpoint = url.substring(url.indexOf("/"), url.length);
 
   callback(endpoints[endpoint]["get"](data));
